@@ -46,7 +46,7 @@ const ChatInterface = ({ question, category, onBack, initialQuestionNumber = 1 }
     }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [messagesToShow]);
 
   // Handle question message after greeting is complete + 2 second pause
   useEffect(() => {
@@ -65,7 +65,7 @@ const ChatInterface = ({ question, category, onBack, initialQuestionNumber = 1 }
 
       return () => clearTimeout(timer);
     }
-  }, [greetingComplete, currentMessageIndex]);
+  }, [greetingComplete, currentMessageIndex, messagesToShow]);
 
   const handleGreetingComplete = () => {
     setGreetingComplete(true);
