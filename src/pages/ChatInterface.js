@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import EmailCaptureModal from './EmailCaptureModal';
 import './ChatInterface.css';
@@ -16,7 +16,7 @@ const ChatInterface = ({ question, category, onBack, initialQuestionNumber = 1 }
   const messagesEndRef = useRef(null);
   const chatContainerRef = useRef(null);
 
-  const messagesToShow = [
+  const messagesToShow = useMemo(() => [
     {
       type: 'greeting',
       text: `Welcome to JEE Masters! 🎉 Let's test your knowledge in ${category}. You have 5 carefully selected questions to solve. Good luck!`
@@ -27,7 +27,7 @@ const ChatInterface = ({ question, category, onBack, initialQuestionNumber = 1 }
       options: question.options,
       questionId: question.id
     }
-  ];
+  ], [category, question.question, question.options, question.id]);
 
   // Auto scroll to bottom
   const scrollToBottom = () => {
