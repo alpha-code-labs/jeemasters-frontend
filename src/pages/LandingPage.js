@@ -38,7 +38,7 @@ const LandingPage = () => {
   // Check user progress
   const checkUserProgress = async (sessionId) => {
     try {
-      const response = await fetch('https://jeemasters-axbqdybwawf3ccbm.centralindia-01.azurewebsites.net/api/get-progress', {
+      const response = await fetch('https://jeemastersbackendv1-hrhza9hzccddhdbv.centralindia-01.azurewebsites.net/api/get-progress', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const LandingPage = () => {
 
       // Only make API call if no session exists
       try {
-        const response = await fetch('https://jeemasters-axbqdybwawf3ccbm.centralindia-01.azurewebsites.net/api/track-visit', {
+        const response = await fetch('https://jeemastersbackendv1-hrhza9hzccddhdbv.centralindia-01.azurewebsites.net/api/track-visit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -140,7 +140,7 @@ const LandingPage = () => {
     const sessionId = localStorage.getItem('jee_session_id');
     
     try {
-      const response = await fetch('https://jeemasters-axbqdybwawf3ccbm.centralindia-01.azurewebsites.net/api/save-email', {
+      const response = await fetch('https://jeemastersbackendv1-hrhza9hzccddhdbv.centralindia-01.azurewebsites.net/api/save-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ const LandingPage = () => {
     
     // Make API call with session ID and selected category
     try {
-      const response = await fetch('https://jeemasters-axbqdybwawf3ccbm.centralindia-01.azurewebsites.net/api/try-for-free', {
+      const response = await fetch('https://jeemastersbackendv1-hrhza9hzccddhdbv.centralindia-01.azurewebsites.net/api/try-for-free', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
