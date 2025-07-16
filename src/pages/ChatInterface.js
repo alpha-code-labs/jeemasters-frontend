@@ -169,7 +169,7 @@ const ChatInterface = ({ question, category, onBack, initialQuestionNumber = 1 }
     
     // Make API call to save email data
     try {
-      const response = await fetch('https://jeemasters-axbqdybwawf3ccbm.centralindia-01.azurewebsites.net/api/save-email', {
+      const response = await fetch('https://jeemastersbackendv1-hrhza9hzccddhdbv.centralindia-01.azurewebsites.net/api/save-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -239,7 +239,7 @@ const ChatInterface = ({ question, category, onBack, initialQuestionNumber = 1 }
     
     // Make API call to submit answer
     try {
-      const response = await fetch('https://jeemasters-axbqdybwawf3ccbm.centralindia-01.azurewebsites.net/api/submit-answer', {
+      const response = await fetch('https://jeemastersbackendv1-hrhza9hzccddhdbv.centralindia-01.azurewebsites.net/api/submit-answer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
